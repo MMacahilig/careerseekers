@@ -1,0 +1,27 @@
+<form class="ui form" method="post" action="/companies">
+  <%= token_tag form_authenticity_token %>
+  <div class="field">
+    <label>Company details</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="company[name]" placeholder="Company">
+      </div>
+      <div class="field">
+        <input type="text" name="company[contact_name]" placeholder="Contact Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Phone</label>
+    <div>
+      <input type="number" name="company[phone]" placeholder="">
+    </div>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <div>
+      <input type="email" name="company[email]" placeholder="">
+    </div>
+  </div>
+  <button class="ui button" tabindex="0" type="submit">Register</button>
+</form>
