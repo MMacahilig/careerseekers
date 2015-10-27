@@ -1,5 +1,2 @@
-class HomepageController < ActionController::Base
-  def index
-
-  end
+class HomepageController < ApplicationController
 end

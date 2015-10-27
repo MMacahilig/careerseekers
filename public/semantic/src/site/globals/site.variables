@@ -1,0 +1,5 @@
+/*******************************
+     User Global Variables
+*******************************/
+@linkColor : #df1995;
+@selectedTextColor : #bb16a3;
