@@ -1,23 +1,4 @@
-<div class="ui top" id="top">
-  <%=image_tag('cs-logo-2.png', alt: 'CareerSeekers New Australian Internship Program', class: 'ui logo left floated' )%>
-  <div class="social">
-    <a href="#"><i class="facebook square large black icon"></i></a>
-    <a href="#"><i class="twitter square large black icon"></i></a>
-    <a href="#"><i class="mail square large black icon"></i></a>
-  </div>
-</div>
-<div class="ui borderless main menu">
-  <div class="ui text container">
-    <div class="header item">
-      <a href="#top">
-        <%=image_tag('cs-logo.png', alt: 'CareerSeekers Logo', class: 'ui logo ct-square' )%>
-      </a>
-    </div>
-    <a class="item" href="#slide1" data-slide="1">About Us</a>
-    <a class="item" href="#slide2" data-slide="2">How it works</a>
-    <a class="item" href="#slide3" data-slide="3">Get involved</a>
-  </div>
-</div>
+<%= render 'header' %>
 <div class="fixed-bg bg-1">
   <div class="ui vertical masthead center aligned segment text container">
     <h1 class="ui inverted header">
@@ -72,64 +53,18 @@
         <a class="item" data-tab="3">Interested Companies</a>
       </div>
       <div class="ui bottom attached tab segment active" data-tab="1">
-        <%= render 'student_form' %>
+        <%= render 'homepage/forms/student_form' %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="2">
-        <%= render 'professional_form' %>
+        <%= render 'homepage/forms/professional_form' %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="3">
-        <%= render 'company_form' %>
+        <%= render 'homepage/forms/company_form' %>
       </div>
     </div>
     <div class="profiles column">
-      <h2 class="ui header center aligned">The Team</h2>
-      <div class="ui three column doubling stackable grid profiles">
-        <div class="column" data-title="Person 1" data-content="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-          <div class="ui basic center aligned segment">
-            <img src="images/person1.png" class="ui square image">
-            <div class="content">
-              <div class="ui header">Person 1</div>
-              <div class="role">
-                Lorem ipsum dolor
-              </div>
-              <div class="phone">02 12341234</div>
-              <div class="email">person@cs.org</div>
-            </div>
-          </div>
-        </div>
-        <div class="column" data-title="Person 2" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-          <div class="ui basic center aligned segment">
-            <img src="images/person2.png" class="ui square image">
-            <div class="content">
-              <div class="ui header">Person 2</div>
-              <div class="role">
-                Lorem ipsum dolor
-              </div>
-              <div class="phone">02 12341234</div>
-              <div class="email">person@cs.org</div>
-            </div>
-          </div>
-        </div>
-        <div class="column" data-title="Person 3" data-content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
-          <div class="ui basic center aligned segment">
-            <img src="images/person3.jpg" class="ui square image">
-            <div class="content">
-              <div class="ui header">Person 3</div>
-              <div class="role">
-                Lorem ipsum dolor
-              </div>
-              <div class="phone">02 12341234</div>
-              <div class="email">person@cs.org</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render 'profiles' %>
     </div>
   </div>
 </div>
-<div class="ui inverted vertical footer segment">
-  <div class="ui container">
-    <h4 class="ui inverted header"> Footer Header</h4>
-    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-  </div>
-</div>
+<%= render 'footer' %>
