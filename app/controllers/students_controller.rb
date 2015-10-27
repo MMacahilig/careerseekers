@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
   def register
-    params[:student]
+    student = params[:student]
+    render json: student
   end
 end

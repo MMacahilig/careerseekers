@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe StudentsController do
+describe CompaniesController, type: :controller do
   describe 'POST#register' do
     it 'do like it do' do
-      response = post(:register, { student: { } })
+      response = post(:register, { company: { } })
       json = JSON.parse(response.body)
       expect(json).not_to be_nil
     end
