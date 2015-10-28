@@ -33,10 +33,7 @@ body, html, main {
   padding-top: 0em;
   min-height: 100%;
   background-position: center center;
-  background-image: linear-gradient(
-                  rgba(117, 47, 145, 0.45),
-                  rgba(117, 47, 145, 0.45)),
-  url('/images/bg-1.png'); }
+  background-image: url('/images/watermark.png'); }
 .fixed-bg.bg-2 {
   min-height: 100%;
   background-position: center center;
@@ -50,7 +47,7 @@ body, html, main {
   background-image:  linear-gradient(
                   rgba(117, 47, 145, 0.45),
                   rgba(117, 47, 145, 0.45)),
-  url('/images/bg-3.png'); }
+  url('/images/bg-1.png'); }
 .fixed-bg.bg-4 {
   min-height: 50%;
   background-position: center center;
