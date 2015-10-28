@@ -6,8 +6,17 @@ body, html, main {
 .top {
   padding: 10px; }
 
-.social {
+.header-right {
   float:right;
+}
+
+.social {
+  text-align: right;
+}
+
+.email {
+  font-size: 1.2em;
+  padding-top: 4em;
 }
 
 .masthead h1.ui.header {
