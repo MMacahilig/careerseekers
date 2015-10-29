@@ -1,27 +1,30 @@
-<%= form_tag('/companies', remote: true, method: 'post', class: 'ui form') do %>
+<%= form_tag('/companies', remote: true, method: 'post', class: 'ui form', id: 'company-form') do %>
   <%= token_tag form_authenticity_token %>
-  <div class="field">
-    <label>Company details</label>
-    <div class="two fields">
-      <div class="field">
-        <input type="text" name="company[name]" placeholder="Company">
+  <%= render 'homepage/forms/result_messages' %>
+  <div class="form">
+    <div class="field">
+      <label>Company details</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="company[name]" placeholder="Company">
+        </div>
+        <div class="field">
+          <input type="text" name="company[contact_name]" placeholder="Contact Name">
+        </div>
       </div>
-      <div class="field">
-        <input type="text" name="company[contact_name]" placeholder="Contact Name">
+    </div>
+    <div class="field">
+      <label>Phone</label>
+      <div>
+        <input type="number" name="company[phone]" placeholder="">
       </div>
     </div>
-  </div>
-  <div class="field">
-    <label>Phone</label>
-    <div>
-      <input type="number" name="company[phone]" placeholder="">
+    <div class="field">
+      <label>Email</label>
+      <div>
+        <input type="email" name="company[email]" placeholder="">
+      </div>
     </div>
+    <button class="ui button" tabindex="0" type="submit">Register</button>
   </div>
-  <div class="field">
-    <label>Email</label>
-    <div>
-      <input type="email" name="company[email]" placeholder="">
-    </div>
-  </div>
-  <button class="ui button" tabindex="0" type="submit">Register</button>
 <% end %>

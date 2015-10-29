@@ -1,57 +1,60 @@
-<%= form_tag('/students', remote: true, method: 'post', class: 'ui form') do %>
+<%= form_tag('/students', remote: true, method: 'post', class: 'ui form', id: 'student-form') do %>
   <%= token_tag form_authenticity_token %>
-  <div class="field">
-    <label>Name</label>
-    <div class="two fields">
-      <div class="field">
-        <input type="text" name="student[first_name]" placeholder="First Name">
+  <%= render 'homepage/forms/result_messages' %>
+  <div class="form">
+    <div class="field">
+      <label>Name</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="student[first_name]" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" name="student[last_name]" placeholder="Last Name">
+        </div>
       </div>
-      <div class="field">
-        <input type="text" name="student[last_name]" placeholder="Last Name">
+    </div>
+    <div class="field">
+      <label>Phone</label>
+      <div>
+        <input type="number" name="student[phone]" placeholder="">
       </div>
     </div>
-  </div>
-  <div class="field">
-    <label>Phone</label>
-    <div>
-      <input type="number" name="student[phone]" placeholder="">
+    <div class="field">
+      <label>Email</label>
+      <div>
+        <input type="email" name="student[email]" placeholder="">
+      </div>
     </div>
-  </div>
-  <div class="field">
-    <label>Email</label>
-    <div>
-      <input type="email" name="student[email]" placeholder="">
+    <div class="field">
+      <label>Stage of process</label>
+      <div>
+        <select class="ui dropdown" name="student[current_status]">
+          <option value="">Select your current status</option>
+          <option value="0">Asylum Seeker</option>
+          <option value="1">Temporary Protection</option>
+          <option value="2">Refugee</option>
+        </select>
+      </div>
     </div>
-  </div>
-  <div class="field">
-    <label>Stage of process</label>
-    <div>
-      <select class="ui dropdown" name="student[current_status]">
-        <option value="">Select your current status</option>
-        <option value="0">Asylum Seeker</option>
-        <option value="1">Temporary Protection</option>
-        <option value="2">Refugee</option>
-      </select>
+    <div class="field">
+      <label>Degree</label>
+      <div>
+        <select class="ui dropdown" name="student[degree]">
+          <option value="">Select your career path</option>
+          <option value="ANE">Agriculture & Environment</option>
+          <option value="ADP">Architecture, Design & Planning</option>
+          <option value="ART">Arts</option>
+          <option value="BUS">Business</option>
+          <option value="EDU">Education</option>
+          <option value="EIT">Engineering & IT</option>
+          <option value="HSC">Health Science</option>
+          <option value="ICD">International & Community Development</option>
+          <option value="LAW">Law</option>
+          <option value="MCJ">Marketing, Communications & Journalism</option>
+          <option value="SCI">Science</option>
+        </select>
+      </div>
     </div>
+    <button class="ui button" tabindex="0" type="submit">Register</button>
   </div>
-  <div class="field">
-    <label>Degree</label>
-    <div>
-      <select class="ui dropdown" name="student[degree]">
-        <option value="">Select your career path</option>
-        <option value="ANE">Agriculture & Environment</option>
-        <option value="ADP">Architecture, Design & Planning</option>
-        <option value="ART">Arts</option>
-        <option value="BUS">Business</option>
-        <option value="EDU">Education</option>
-        <option value="EIT">Engineering & IT</option>
-        <option value="HSC">Health Science</option>
-        <option value="ICD">International & Community Development</option>
-        <option value="LAW">Law</option>
-        <option value="MCJ">Marketing, Communications & Journalism</option>
-        <option value="SCI">Science</option>
-      </select>
-    </div>
-  </div>
-  <button class="ui button" tabindex="0" type="submit">Register</button>
 <% end %>
