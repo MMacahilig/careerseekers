@@ -1,6 +1,5 @@
 <%= form_tag('/professionals', remote: true, method: 'post', class: 'ui form', id: 'professional-form') do %>
   <%= token_tag form_authenticity_token %>
-  <%= render 'homepage/forms/result_messages' %>
   <div class="form">
     <div class="field">
       <label>Name</label>
@@ -22,7 +21,7 @@
     <div class="field">
       <label>Email</label>
       <div>
-        <input type="email" name="professional[email]" placeholder="">
+        <input type="email" name="professional[email]" placeholder="" id="email">
       </div>
     </div>
     <div class="field">

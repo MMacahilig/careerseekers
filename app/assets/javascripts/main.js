@@ -2,14 +2,36 @@ var CareerSeekers = CareerSeekers || {};
 
 CareerSeekers.Form = (function(window, undefined) {
   var init = function(selector) {
-    $(selector).on("ajax:success", function(e, data, status, xhr) {
+    var $form = $(selector);
+    initXhrSubmit($form);
+    initValidation($form);
+  };
+
+  var initXhrSubmit = function($form) {
+    $form.on("ajax:success", function(e, data, status, xhr) {
       if(data.result === true) {
-        $(this).find('.error').hide();
+        $(this).find('.negative').hide();
         $(this).find('.form').hide();
-        $(this).find('.success').show();
+        $(this).find('.info').show();
       }
       else {
-        $(this).find('.error').show();
+        $(this).find('.negative').show();
+      }
+    });
+  };
+
+  var initValidation = function($form) {
+    $form.form({
+      fields: {
+        email: {
+          identifier : 'email',
+          rules: [
+            {
+              type : 'email',
+              prompt : 'Please enter a valid e-mail'
+            }
+          ]
+        }
       }
     });
   };
