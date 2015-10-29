@@ -1,0 +1,2 @@
+class Professional < Person
+end

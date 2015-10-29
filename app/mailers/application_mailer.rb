@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@careerseekers.org.au'
+  default from: ENV['DEFAULT_EMAIL']
   layout 'mailer'
 end
