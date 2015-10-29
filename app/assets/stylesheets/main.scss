@@ -142,11 +142,38 @@ body {
   .borderless.main.menu a.item {
     font-size: 1.4rem;
   }
+
+  .ui.stackable.relaxed.grid .forms.column,
+  .ui.stackable.relaxed.grid .profiles.column,
+  .ui.stackable.relaxed.grid .profiles .column {
+    width: 100%;
+    float: none;
+  }
+
+  .ui.stackable.relaxed.grid .forms.column .form.container * {
+    font-size: 1.3rem;
+  }
+
+  .ui.stackable.grid.profiles * {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media only screen and (max-device-width: 480px) {
   .borderless.main.menu a.item {
     font-size: 2rem;
+  }
+
+  .ui.stackable.relaxed.grid .forms.column .form.container * {
+    font-size: 1.6rem;
+  }
+
+  .ui.stackable.grid.profiles * {
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 

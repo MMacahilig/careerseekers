@@ -47,19 +47,21 @@
   <div class="ui stackable two column very relaxed grid">
     <div class="forms column">
       <h2 class="ui header center aligned">Registration Form</h2>
-      <div class="ui three item stackable top attached tabs menu">
-        <a class="item active" data-tab="1">Student</a>
-        <a class="item" data-tab="2">Mid-Career Professional</a>
-        <a class="item" data-tab="3">Interested Companies</a>
-      </div>
-      <div class="ui bottom attached tab segment active" data-tab="1">
-        <%= render 'homepage/forms/student_form' %>
-      </div>
-      <div class="ui bottom attached tab segment" data-tab="2">
-        <%= render 'homepage/forms/professional_form' %>
-      </div>
-      <div class="ui bottom attached tab segment" data-tab="3">
-        <%= render 'homepage/forms/company_form' %>
+      <div class="form container">
+        <div class="ui three item stackable top attached tabs menu">
+          <a class="item active" data-tab="1">Student</a>
+          <a class="item" data-tab="2">Mid-Career Professional</a>
+          <a class="item" data-tab="3">Interested Companies</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="1">
+          <%= render 'homepage/forms/student_form' %>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="2">
+          <%= render 'homepage/forms/professional_form' %>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="3">
+          <%= render 'homepage/forms/company_form' %>
+        </div>
       </div>
     </div>
     <div class="profiles column">
