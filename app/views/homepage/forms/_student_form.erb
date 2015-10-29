@@ -1,4 +1,4 @@
-<form class="ui form" method="post" action="/students">
+<%= form_tag('/students', remote: true, method: 'post', class: 'ui form') do %>
   <%= token_tag form_authenticity_token %>
   <div class="field">
     <label>Name</label>
@@ -54,4 +54,4 @@
     </div>
   </div>
   <button class="ui button" tabindex="0" type="submit">Register</button>
-</form>
+<% end %>
