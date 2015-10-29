@@ -1,4 +1,5 @@
 <%= form_tag('/professionals', remote: true, method: 'post', class: 'ui form', id: 'professional-form') do %>
+  <%= render 'homepage/forms/result_messages' %>
   <%= token_tag form_authenticity_token %>
   <div class="form">
     <div class="field">
