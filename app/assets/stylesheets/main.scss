@@ -121,4 +121,42 @@ body {
 
 .ui.footer.segment {
   margin: 5em 0em 0em;
-  padding: 5em 0em; }
+  padding: 5em 0em;
+}
+
+@media only screen and (max-device-width: 1000px) {
+  #top {
+    display: none;
+  }
+
+  .fixed-bg.bg-1 {
+    min-height: 45%;
+  }
+
+  .fixed-bg.bg-2, .fixed-bg.bg-3, .fixed-bg.bg-4 {
+    min-height: 40%;
+  }
+
+  .scrolling-bg {
+    min-height: auto;
+  }
+
+  .masthead h1.ui.header {
+    margin-top: 2em;
+  }
+
+  .fixed-bg.bg-1 .masthead.container h1.ui.header {
+    margin-top: 3em;
+  }
+
+  .borderless.main.menu a.item {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .borderless.main.menu a.item {
+    font-size: 2rem;
+  }
+}
+
