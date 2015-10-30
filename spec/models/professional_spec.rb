@@ -23,7 +23,7 @@ describe Professional do
 
   describe '#degree' do
     it 'is not required' do
-      professional = Professional.new(email: 'abc@xyz.com', degree: 'xe')
+      professional = Professional.new(email: 'abc@xyz.com', degree: '')
       expect(professional.valid?).to be_truthy
     end
 
@@ -33,7 +33,7 @@ describe Professional do
       expect(professional.valid?).to be_truthy
     end
 
-    it 'is invald if over 75 chars' do
+    it 'is invalid if over 75 chars' do
       this_is_76_chars = 'VaBZgM4bFSqwLEz5eYv4pQKVxabPI22TywJXz6IlCHvBk63rSUm5Bzcm6zhXcDbFPtyb1pScCBnN'
       professional = Professional.new(email: 'abc@xyz.com', degree: this_is_76_chars)
       expect(professional.valid?).to be_falsey

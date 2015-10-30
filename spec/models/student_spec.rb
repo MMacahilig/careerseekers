@@ -20,4 +20,23 @@ describe Student do
       expect(student.valid?).to be_truthy
     end
   end
+
+  describe '#degree' do
+    it 'is not required' do
+      student = Professional.new(email: 'abc@xyz.com', degree: '')
+      expect(student.valid?).to be_truthy
+    end
+
+    it 'is valid if 75 chars' do
+      this_is_75_chars = 'VaBZgM4bFSqwLEz5eYv4pQKVxabPI22TywJXz6IlCHvBk63rSUm5Bzcm6zhXcDbFPtyb1pScCBn'
+      student = Professional.new(email: 'abc@xyz.com', degree: this_is_75_chars)
+      expect(student.valid?).to be_truthy
+    end
+
+    it 'is invalid if over 75 chars' do
+      this_is_76_chars = 'VaBZgM4bFSqwLEz5eYv4pQKVxabPI22TywJXz6IlCHvBk63rSUm5Bzcm6zhXcDbFPtyb1pScCBnN'
+      student = Professional.new(email: 'abc@xyz.com', degree: this_is_76_chars)
+      expect(student.valid?).to be_falsey
+    end
+  end
 end

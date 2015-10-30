@@ -31,6 +31,15 @@ CareerSeekers.Form = (function(window, undefined) {
               prompt : 'Please enter a valid e-mail'
             }
           ]
+        },
+        degree: {
+          identifier : 'degree',
+          rules: [
+            {
+              type: 'maxLength[75]',
+              prompt : 'Please enter 75 characters or less'
+            }
+          ]
         }
       }
     });
